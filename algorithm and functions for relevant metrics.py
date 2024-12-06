@@ -523,7 +523,7 @@ argo_smooth = padded_moving_average_np(argo_profile.data[0], argo_window)
 plt.subplots(figsize=[10, 3], dpi=200)
 
 plt.plot(argo_profile[22]["Frequency"].data, argo_profile[0], color="pink", label="Original profile")
-plt.plot(argo_profile[22]["Frequency"].data, argo_smooth, color="red", label="Moving average")
+plt.plot(argo_profile[22]["Frequency"].data, argo_smooth, color="red", label=f"Moving average window {argo_window}")
 plt.grid()
 plt.legend()
 plt.xlabel("Frequency / Hz")
