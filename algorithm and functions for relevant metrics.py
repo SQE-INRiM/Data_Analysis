@@ -114,6 +114,7 @@ def fft_for_window_np(frequency_array: np.ndarray,
     #correction for low values of massimo_trasf and freq_trasf
     if window_opt < 5:
         window_opt += 2
+    #can be improved
 
     print(f"Optimal window width (points): {window_opt}")
     fig, ax = plt.subplots(2, 1, figsize=[10, 5], dpi=200)
